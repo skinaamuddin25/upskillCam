@@ -1,0 +1,32 @@
+<% title = "Cart"; %>
+
+<div class="card">
+  <h1>Your Cart</h1>
+
+  <% if (cart.length === 0) { %>
+    <p>Cart is empty.</p>
+  <% } else { %>
+    <ul class="cart-list">
+      <% cart.forEach(item => { %>
+        <li>
+          <div class="cart-info">
+            <strong><%= item.name %></strong>
+            <span class="label">
+              Rs.<%= item.price %> × <%= item.quantity %>
+            </span>
+          </div>
+        </li>
+      <% }) %>
+    </ul>
+    <p style="margin-top:10px;">
+      <strong>Total: Rs.<%= total %></strong>
+    </p>
+    <form method="post" action="/order" style="margin-top:10px;">
+      <button type="submit">Place Order (Cash on Delivery)</button>
+    </form>
+  <% } %>
+
+  <p style="margin-top:10px;">
+    <a href="/restaurants">Continue shopping</a>
+  </p>
+</div>

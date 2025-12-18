@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  color: #222;
+}
+
+header, footer {
+  background: #ff6347;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+}
+
+header h2 {
+  font-weight: 600;
+}
+
+.nav-links a {
+  margin-left: 15px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 960px;
+  margin: 30px auto;
+  padding: 0 20px 40px;
+}
+
+h1 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+button,
+.btn {
+  background: #ff6347;
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover,
+.btn:hover {
+  background: #e5533d;
+  transform: translateY(-1px);
+}
+
+a {
+  color: #ff6347;
+}
+
+ul {
+  list-style: none;
+}
+
+.restaurant-list li,
+.menu-list li,
+.cart-list li,
+.orders-list li {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px 18px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.restaurant-info,
+.menu-info,
+.cart-info,
+.order-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+form p {
+  margin-bottom: 12px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+}

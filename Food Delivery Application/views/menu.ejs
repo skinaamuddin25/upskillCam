@@ -1,0 +1,27 @@
+<% title = "Menu - " + restaurant.name; %>
+
+<div class="card">
+  <h1><%= restaurant.name %> – Menu</h1>
+
+  <ul class="menu-list">
+    <% items.forEach(item => { %>
+      <li>
+        <div class="menu-info">
+          <strong><%= item.name %></strong>
+          <span class="label">Rs.<%= item.price %></span>
+        </div>
+        <form method="post" action="/cart/add">
+          <input type="hidden" name="item_id" value="<%= item.id %>">
+          <input type="hidden" name="name" value="<%= item.name %>">
+          <input type="hidden" name="price" value="<%= item.price %>">
+          <button type="submit">Add to cart</button>
+        </form>
+      </li>
+    <% }) %>
+  </ul>
+
+  <p>
+    <a href="/restaurants">Back to restaurants</a> |
+    <a href="/cart">View cart</a>
+  </p>
+</div>

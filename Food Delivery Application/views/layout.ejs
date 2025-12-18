@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= title || "Food Delivery Application System" %></title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h2>Food Delivery</h2>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <% if (user) { %>
+        <a href="/restaurants">Restaurants</a>
+        <a href="/cart">Cart</a>
+        <a href="/orders">Orders</a>
+        <a href="/logout">Logout</a>
+      <% } else { %>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+      <% } %>
+    </nav>
+  </header>
+
+  <main>
+    <%- body %>
+  </main>
+
+  <footer>
+    <p>&copy; <%= new Date().getFullYear() %> Food Delivery Application System</p>
+  </footer>
+</body>
+</html>

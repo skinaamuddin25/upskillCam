@@ -1,0 +1,17 @@
+<% title = "Restaurants"; %>
+
+<div class="card">
+  <h1>Restaurants</h1>
+
+  <ul class="restaurant-list">
+    <% restaurants.forEach(r => { %>
+      <li>
+        <div class="restaurant-info">
+          <strong><%= r.name %></strong>
+          <span class="label"><%= r.address %></span>
+        </div>
+        <a class="btn" href="/restaurants/<%= r.id %>/menu">View Menu</a>
+      </li>
+    <% }) %>
+  </ul>
+</div>

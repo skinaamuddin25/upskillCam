@@ -1,0 +1,27 @@
+<% title = "Login"; %>
+
+<div class="card">
+  <h1>Login</h1>
+
+  <% if (error) { %>
+    <p style="color:red; margin-bottom:10px;"><%= error %></p>
+  <% } %>
+
+  <form method="post" action="/login">
+    <p>
+      <label>Email:<br>
+        <input type="email" name="email">
+      </label>
+    </p>
+    <p>
+      <label>Password:<br>
+        <input type="password" name="password">
+      </label>
+    </p>
+    <button type="submit">Login</button>
+  </form>
+
+  <p style="margin-top:10px;">
+    No account? <a href="/register">Register</a>
+  </p>
+</div>

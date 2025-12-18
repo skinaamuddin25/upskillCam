@@ -1,0 +1,19 @@
+<% title = "Home"; %>
+
+<div class="card">
+  <h1>Welcome</h1>
+
+  <% if (user) { %>
+    <p>Welcome, <strong><%= user.name %></strong>.</p>
+    <p style="margin-top: 10px;">
+      <a class="btn" href="/restaurants">Browse Restaurants</a>
+    </p>
+  <% } else { %>
+    <p>Order delicious food from your favourite restaurants.</p>
+    <p style="margin-top: 10px;">
+      <a class="btn" href="/login">Login</a>
+      &nbsp;
+      <a class="btn" href="/register">Register</a>
+    </p>
+  <% } %>
+</div>
